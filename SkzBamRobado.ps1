@@ -38,7 +38,7 @@ Clear-Host
 
 Write-Host "";
 Write-Host "";
-Write-Host -ForegroundColor Blue "   Brother tranquilo no es virus - SkzW  ¡Viva Mexico! " -NoNewLine
+Write-Host -ForegroundColor Blue " Brother tranquilo no es virus - SkzW  ¡Viva Mexico! " -NoNewLine
 Write-Host -ForegroundColor Green " discord.gg/sololegends";
 Write-Host "";
 
