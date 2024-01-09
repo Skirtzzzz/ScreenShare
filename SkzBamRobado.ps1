@@ -58,7 +58,7 @@ if (!(Get-PSDrive -Name HKLM -PSProvider Registry)){
 $bv = ("bam", "bam\State")
 Try{$Users = foreach($ii in $bv){Get-ChildItem -Path "HKLM:\SYSTEM\CurrentControlSet\Services\$($ii)\UserSettings\" | Select-Object -ExpandProperty PSChildName}}
 Catch{
-    Write-Warning "Error Parseando BAM Key. Likely unsupported Windows Version"
+    Write-Warning "Error Parseando BAM Key. Probablemente no soporta tu version de Windows :( "
     Exit
 }
 $rpath = @("HKLM:\SYSTEM\CurrentControlSet\Services\bam\","HKLM:\SYSTEM\CurrentControlSet\Services\bam\state\")
@@ -71,7 +71,7 @@ $Bam = Foreach ($Sid in $Users){$u++
             
         foreach($rp in $rpath){
            $BamItems = Get-Item -Path "$($rp)UserSettings\$Sid" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Property
-           Write-Host -ForegroundColor Red "Extrayendo " -NoNewLine
+           Write-Host -ForegroundColor Green "Extrayendo " -NoNewLine
            Write-Host -ForegroundColor Blue "$($rp)UserSettings\$SID"
            $bi = 0 
 
@@ -105,7 +105,7 @@ $Bam = Foreach ($Sid in $Users){$u++
 			    $sig = if((((split-path -path $item) | ConvertFrom-String -Delimiter "\\").P3)-match '\d{1}')
 			    {Get-Signature -FilePath $path} else {$sig = ""}				
                 [PSCustomObject]@{
-                            'Examiner Time' = $TimeLocal
+                            'Tiempo del examinador' = $TimeLocal
 						    'Tiempo de ultima ejecucion (UTC)'= $TimeUTC
 						    'Tiempo de ultima ejecucion (Hora del usuario)' = $TimeUser
 						     Application = 	$f
