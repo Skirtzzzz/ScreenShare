@@ -38,8 +38,8 @@ Clear-Host
 
 Write-Host "";
 Write-Host "";
-Write-Host -ForegroundColor Light Magenta "   Brother tranquilo no es virus - SkzW  ¡Viva Mexico! " -NoNewLine
-Write-Host -ForegroundColor Red " discord.gg/sololegends";
+Write-Host -ForegroundColor Blue "   Brother tranquilo no es virus - SkzW  ¡Viva Mexico! " -NoNewLine
+Write-Host -ForegroundColor Green " discord.gg/sololegends";
 Write-Host "";
 
 function Test-Admin {;$currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Principal.WindowsIdentity]::GetCurrent());$currentUser.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator);}
