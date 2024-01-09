@@ -13,23 +13,23 @@ function Get-Signature {
 
     if ($Existence) {
         if ($Authenticode -eq "Valid") {
-            $Signature = "Valid Signature"
+            $Signature = "Firma Valida"
         }
         elseif ($Authenticode -eq "NotSigned") {
-            $Signature = "Invalid Signature (NotSigned)"
+            $Signature = "Firma Invalida (No esta firmado)"
         }
         elseif ($Authenticode -eq "HashMismatch") {
-            $Signature = "Invalid Signature (HashMismatch)"
+            $Signature = "Firma Invalida (HashMismatch)"
         }
         elseif ($Authenticode -eq "NotTrusted") {
-            $Signature = "Invalid Signature (NotTrusted)"
+            $Signature = "Firma Invalida (NotTrusted)"
         }
         elseif ($Authenticode -eq "UnknownError") {
-            $Signature = "Invalid Signature (UnknownError)"
+            $Signature = "Firma Invalida (UnknownError)"
         }
         return $Signature
     } else {
-        $Signature = "File Was Not Found"
+        $Signature = "El archivo no fue encontrado"
         return $Signature
     }
 }
@@ -38,13 +38,13 @@ Clear-Host
 
 Write-Host "";
 Write-Host "";
-Write-Host -ForegroundColor Blue "   Robado por SkzW.  ¡VivaMexico!" -NoNewLine
-Write-Host -ForegroundColor Red "discord.gg/sololegends";
+Write-Host -ForegroundColor Light Magenta "   Brother tranquilo no es virus - SkzW  ¡Viva Mexico! " -NoNewLine
+Write-Host -ForegroundColor Red " discord.gg/sololegends";
 Write-Host "";
 
 function Test-Admin {;$currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Principal.WindowsIdentity]::GetCurrent());$currentUser.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator);}
 if (!(Test-Admin)) {
-    Write-Warning "Please Run This Script as Admin."
+    Write-Warning "Brother ejecutalo como ADMIN :V"
     Start-Sleep 10
     Exit
 }
@@ -53,12 +53,12 @@ $sw = [Diagnostics.Stopwatch]::StartNew()
 
 if (!(Get-PSDrive -Name HKLM -PSProvider Registry)){
     Try{New-PSDrive -Name HKLM -PSProvider Registry -Root HKEY_LOCAL_MACHINE}
-    Catch{Write-Warning "Error Mounting HKEY_Local_Machine"}
+    Catch{Write-Warning "Error montando HKEY_Local_Machine"}
 }
 $bv = ("bam", "bam\State")
 Try{$Users = foreach($ii in $bv){Get-ChildItem -Path "HKLM:\SYSTEM\CurrentControlSet\Services\$($ii)\UserSettings\" | Select-Object -ExpandProperty PSChildName}}
 Catch{
-    Write-Warning "Error Parsing BAM Key. Likely unsupported Windows Version"
+    Write-Warning "Error Parseando BAM Key. Likely unsupported Windows Version"
     Exit
 }
 $rpath = @("HKLM:\SYSTEM\CurrentControlSet\Services\bam\","HKLM:\SYSTEM\CurrentControlSet\Services\bam\state\")
@@ -71,7 +71,7 @@ $Bam = Foreach ($Sid in $Users){$u++
             
         foreach($rp in $rpath){
            $BamItems = Get-Item -Path "$($rp)UserSettings\$Sid" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Property
-           Write-Host -ForegroundColor Red "Extracting " -NoNewLine
+           Write-Host -ForegroundColor Red "Extrayendo " -NoNewLine
            Write-Host -ForegroundColor Blue "$($rp)UserSettings\$SID"
            $bi = 0 
 
@@ -106,8 +106,8 @@ $Bam = Foreach ($Sid in $Users){$u++
 			    {Get-Signature -FilePath $path} else {$sig = ""}				
                 [PSCustomObject]@{
                             'Examiner Time' = $TimeLocal
-						    'Last Execution Time (UTC)'= $TimeUTC
-						    'Last Execution User Time' = $TimeUser
+						    'Tiempo de ultima ejecucion (UTC)'= $TimeUTC
+						    'Tiempo de ultima ejecucion (Hora del usuario)' = $TimeUser
 						     Application = 	$f
 						     Path =  		$path
                              Signature =          $Sig
@@ -116,9 +116,9 @@ $Bam = Foreach ($Sid in $Users){$u++
                              Regpath =        $rp
                              }}}}}
 
-$Bam | Out-GridView -PassThru -Title "BAM key entries $($Bam.count)  - User TimeZone: ($UserTime) -> ActiveBias: ( $Bias) - DayLightTime: ($Day)"
+$Bam | Out-GridView -PassThru -Title "Entradas BAM: $($Bam.count)  - Zona Horaria del Usuario: ($UserTime) -> ActiveBias: ( $Bias) - DayLightTime: ($Day)"
 
 $sw.stop()
 $t = $sw.Elapsed.TotalMinutes
 Write-Host ""
-Write-Host "Elapsed Time $t Minutes" -ForegroundColor Yellow
+Write-Host "Se tardo $t Minutos" -ForegroundColor Yellow
