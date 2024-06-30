@@ -47,7 +47,9 @@ Write-Host -ForegroundColor Magenta " ░╚═══██╗██║░░█
 Write-Host -ForegroundColor Magenta " ██████╔╝╚█████╔╝███████╗╚█████╔╝  ███████╗███████╗╚██████╔╝███████╗██║░╚███║██████╔╝██████╔╝ ";
 Write-Host -ForegroundColor Magenta " ╚═════╝░░╚════╝░╚══════╝░╚════╝░  ╚══════╝╚══════╝░╚═════╝░╚══════╝╚═╝░░╚══╝╚═════╝░╚═════╝░ ";
 Write-Host "";
-Write-Host -ForegroundColor Green " discord.gg/sololegends";
+Write-Host -ForegroundColor Cyan " Juro lealtad inquebrantable a Kendo, Shadia, SkzW, Kiev y Yorshfly en el SS Team. Mi compromiso es un vínculo virtual, tejido con la firmeza de códigos entrelazados. En cada SS, mi lealtad persistirá, forjando una camaradería digital eterna en el vasto reino de la red. ";
+Write-Host "";
+Write-Host -ForegroundColor Green " discord.gg/sololegends ";
 Write-Host "";
 Write-Host "";
 
