@@ -47,9 +47,9 @@ Write-Host -ForegroundColor Magenta " ░╚═══██╗██║░░█
 Write-Host -ForegroundColor Magenta " ██████╔╝╚█████╔╝███████╗╚█████╔╝  ███████╗███████╗╚██████╔╝███████╗██║░╚███║██████╔╝██████╔╝ ";
 Write-Host -ForegroundColor Magenta " ╚═════╝░░╚════╝░╚══════╝░╚════╝░  ╚══════╝╚══════╝░╚═════╝░╚══════╝╚═╝░░╚══╝╚═════╝░╚═════╝░ ";
 Write-Host "";
-Write-Host -ForegroundColor Cyan " Juro lealtad inquebrantable a Kendo, Shadia, SkzW, Kiev y Yorshfly en el SS Team. Mi compromiso es un vínculo virtual, tejido con la firmeza de códigos entrelazados. En cada SS, mi lealtad persistirá, forjando una camaradería digital eterna en el vasto reino de la red. ";
+Write-Host -ForegroundColor Cyan "Juro lealtad inquebrantable a Kendo, Shadia, SkzW, Kiev y Yorshfly en el SS Team. Mi compromiso es un vínculo virtual, tejido con la firmeza de códigos entrelazados. En cada SS, mi lealtad persistirá, forjando una camaradería digital eterna en el vasto reino de la red. ";
 Write-Host "";
-Write-Host -ForegroundColor Green " discord.gg/sololegends ";
+Write-Host -ForegroundColor DarkGreen " discord.gg/sololegends ";
 Write-Host "";
 Write-Host "";
 
@@ -83,8 +83,8 @@ $Bam = Foreach ($Sid in $Users){$u++
             
         foreach($rp in $rpath){
            $BamItems = Get-Item -Path "$($rp)UserSettings\$Sid" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Property
-           Write-Host -ForegroundColor Green "Extrayendo " -NoNewLine
-           Write-Host -ForegroundColor Blue "$($rp)UserSettings\$SID"
+           Write-Host -ForegroundColor DarkRed "Extrayendo " -NoNewLine
+           Write-Host -ForegroundColor White "$($rp)UserSettings\$SID"
            $bi = 0 
 
             Try{
