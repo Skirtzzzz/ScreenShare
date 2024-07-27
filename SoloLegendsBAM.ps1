@@ -1,5 +1,17 @@
 $ErrorActionPreference = "SilentlyContinue"
 
+function Get-OldestConnectTime {
+    $oldestLogon = Get-CimInstance -ClassName Win32_LogonSession | 
+        Where-Object {$_.LogonType -eq 2 -or $_.LogonType -eq 10} | 
+        Sort-Object -Property StartTime | 
+        Select-Object -First 1
+    if ($oldestLogon) {
+        return $oldestLogon.StartTime
+    } else {
+        return $null
+    }
+}
+
 function Get-Signature {
 
     [CmdletBinding()]
