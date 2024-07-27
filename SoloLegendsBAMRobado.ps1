@@ -144,4 +144,4 @@ $Bam = Foreach ($Sid in $Users) {
                     } else {
                         ""
                     }
-                    $f = if ((((split-path -path $
+                    $f = if ((((split-path -path $item) | ConvertFrom-String -Delimiter "\\").P3) -match
