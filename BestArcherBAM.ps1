@@ -41,16 +41,23 @@ Write-Host "";
 Write-Host "";
 Write-Host -ForegroundColor Red " Tranquilo joven usuario, estas en manos de los expertos. ";
 Write-Host "";
-Write-Host -ForegroundColor Magenta " ░██████╗░█████╗░██╗░░░░░░█████╗░  ██╗░░░░░███████╗░██████╗░███████╗███╗░░██╗██████╗░░██████╗ ";
-Write-Host -ForegroundColor Magenta " ██╔════╝██╔══██╗██║░░░░░██╔══██╗  ██║░░░░░██╔════╝██╔════╝░██╔════╝████╗░██║██╔══██╗██╔════╝ ";
-Write-Host -ForegroundColor Magenta " ╚█████╗░██║░░██║██║░░░░░██║░░██║  ██║░░░░░█████╗░░██║░░██╗░█████╗░░██╔██╗██║██║░░██║╚█████╗░ ";
-Write-Host -ForegroundColor Magenta " ░╚═══██╗██║░░██║██║░░░░░██║░░██║  ██║░░░░░██╔══╝░░██║░░╚██╗██╔══╝░░██║╚████║██║░░██║░╚═══██╗ ";
-Write-Host -ForegroundColor Magenta " ██████╔╝╚█████╔╝███████╗╚█████╔╝  ███████╗███████╗╚██████╔╝███████╗██║░╚███║██████╔╝██████╔╝ ";
-Write-Host -ForegroundColor Magenta " ╚═════╝░░╚════╝░╚══════╝░╚════╝░  ╚══════╝╚══════╝░╚═════╝░╚══════╝╚═╝░░╚══╝╚═════╝░╚═════╝░ ";
+Write-Host -ForegroundColor Magenta " // +=============================================================+
+Write-Host -ForegroundColor Magenta // | ____                                 __                     |
+Write-Host -ForegroundColor Magenta // || __ ) _ __ __ ___   ___   _____     / /                     |
+Write-Host -ForegroundColor Magenta // ||  _ \| '__/ _` \ \ / \ \ / / _ \   / /                      |
+Write-Host -ForegroundColor Magenta // || |_) | | | (_| |\ V / \ V |  __/  / /                       |
+Write-Host -ForegroundColor Magenta // ||____/|_|  \__,_| \_/   \_/ \___| /_/                        |
+Write-Host -ForegroundColor Magenta // | ____           _      _             _                       |
+Write-Host -ForegroundColor Magenta // || __ )  ___ ___| |_   / \   _ __ ___| |__   ___ _ __         |
+Write-Host -ForegroundColor Magenta // ||  _ \ / _ / __| __| / _ \ | '__/ __| '_ \ / _ | '__|        |
+Write-Host -ForegroundColor Magenta // || |_) |  __\__ | |_ / ___ \| | | (__| | | |  __| |           |
+Write-Host -ForegroundColor Magenta // ||____/ \___|___/\__/_/   \_|_|  \___|_| |_|\___|_|     _____ |
+Write-Host -ForegroundColor Magenta // |                                                      |_____||
+Write-Host -ForegroundColor Magenta // +=============================================================+
 Write-Host "";
-Write-Host -ForegroundColor Cyan "Juro lealtad inquebrantable a Kendo, Shadia, SkzW, Esteban y Yorshfly en el SS Team. Mi compromiso es un vínculo virtual, tejido con la firmeza de códigos entrelazados. En cada SS, mi lealtad persistirá, forjando una camaradería digital eterna en el vasto reino de la red. ";
+Write-Host -ForegroundColor Cyan "Juro que voy a respetar esta SS Tool creada por BestArcher_, te agradesco por pasarla.";
 Write-Host "";
-Write-Host -ForegroundColor DarkGreen " discord.gg/sololegends ";
+Write-Host -ForegroundColor DarkGreen " https://discord.gg/3HCKYGwF24 ";
 Write-Host "";
 Write-Host "";
 
